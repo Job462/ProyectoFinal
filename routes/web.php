@@ -17,7 +17,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => 'web'], function () {
-    // Tus rutas van aquí
-    Route::resource('contacts', ContactController::class);
-});
