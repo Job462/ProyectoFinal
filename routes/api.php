@@ -21,3 +21,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::resource('contacts', ContactController::class);
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contacts', 'index');
+    Route::post('/contacts', 'store');
+    Route::get('/contacts/{contact}', 'show');
+    Route::put('/contacts/{contact}', 'update');
+    Route::delete('/contacts/{contact}', 'destroy');
+});
