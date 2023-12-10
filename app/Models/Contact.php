@@ -10,4 +10,5 @@ class Contact extends Model
     use HasFactory;
 
     protected $fillable = ['nombre', 'celular', 'email'];
+    public $timestamps = false;
 }
