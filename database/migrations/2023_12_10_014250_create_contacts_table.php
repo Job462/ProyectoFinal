@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('celular',10);
             $table->string('email')->unique();
-            $table->timestamps();
 
         });
     }
